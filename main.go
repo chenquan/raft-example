@@ -213,9 +213,9 @@ type config struct {
 }
 
 func getConfig() config {
-	var nodeId = flag.String("node-id", "node1", "Input Your Name")
-	var httpPort = flag.Int("http-port", 2222, "Input Your Age")
-	var raftPort = flag.Int("raft-port", 8222, "Input Your Gender")
+	var nodeId = flag.String("node-id", "node1", "Input node id")
+	var httpPort = flag.Int("http-port", 2222, "Input http port")
+	var raftPort = flag.Int("raft-port", 8222, "Input raft port")
 	flag.Parse()
 
 	return config{nodeId: *nodeId, httpPort: *httpPort, raftPort: *raftPort}
